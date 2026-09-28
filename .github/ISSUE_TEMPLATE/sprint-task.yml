@@ -1,0 +1,98 @@
+name: Sprint Task
+description: Create a new task for sprint planning and tracking
+title: "[TASK]: "
+labels: ["task"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Sprint Task Template
+        Fill in the details below to create a new sprint task.
+
+  - type: input
+    id: sprint
+    attributes:
+      label: Sprint / Iteration
+      description: Which sprint or iteration is this task for?
+      placeholder: "e.g., Sprint 24, Q4-W1, Iteration 5"
+    validations:
+      required: true
+
+  - type: input
+    id: start_date
+    attributes:
+      label: Start Date
+      description: When will work on this task begin?
+      placeholder: "YYYY-MM-DD (e.g., 2026-09-28)"
+    validations:
+      required: false
+
+  - type: input
+    id: target_date
+    attributes:
+      label: Target Date
+      description: When should this task be completed?
+      placeholder: "YYYY-MM-DD (e.g., 2026-10-05)"
+    validations:
+      required: false
+
+  - type: input
+    id: estimate
+    attributes:
+      label: Estimate (hours)
+      description: Estimated effort in hours
+      placeholder: "e.g., 8, 16, 24"
+    validations:
+      required: false
+
+  - type: input
+    id: actual
+    attributes:
+      label: Actual (hours)
+      description: Actual time spent (can be updated later)
+      placeholder: "e.g., 10, 20"
+    validations:
+      required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Task Description
+      description: Detailed description of what needs to be done
+      placeholder: Describe the task in detail...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: Task priority level
+      options:
+        - Low
+        - Medium
+        - High
+        - Critical
+      default: 1
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance Criteria
+      description: What conditions must be met for this task to be considered done?
+      placeholder: |
+        - [ ] Criteria 1
+        - [ ] Criteria 2
+        - [ ] Criteria 3
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional Notes
+      description: Any additional context, dependencies, or notes
+    validations:
+      required: false

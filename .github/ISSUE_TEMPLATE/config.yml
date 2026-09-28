@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 📊 View Sprint Board
+    url: https://github.com/Thammasok/.workspace-engineer/projects
+    about: Track sprint progress and manage tasks on the project board
